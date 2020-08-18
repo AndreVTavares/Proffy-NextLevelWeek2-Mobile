@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     color: '#FFF',
     fontSize: 20,
     lineHeight: 30,
-    marginTop: 80,
+    marginTop: 40,
   },
 
   titleBold: {
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
   },
 
   button: {
-    height: 150,
+    height: 140,
     width: '48%',
     backgroundColor: '#333',
     borderRadius: 8,
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     lineHeight: 20,
     maxWidth: 140,
     marginTop: 40,
-  }
+  },
 });
 
 export default styles;
