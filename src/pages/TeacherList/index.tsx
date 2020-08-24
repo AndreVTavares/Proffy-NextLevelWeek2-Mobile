@@ -4,6 +4,7 @@ import {
   ScrollView,
   TextInput,
   BorderlessButton,
+  RectButton,
 } from 'react-native-gesture-handler';
 import { Feather } from '@expo/vector-icons';
 
@@ -57,6 +58,10 @@ const TeacherList = () => {
                 />
               </View>
             </View>
+
+            <RectButton style={styles.submitButton}>
+              <Text style={styles.submitButtonText}>Filtrar</Text>
+            </RectButton>
           </View>
         )}
       </PageHeader>
