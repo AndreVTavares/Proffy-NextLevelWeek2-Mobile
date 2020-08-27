@@ -6,6 +6,8 @@ import heartOutlineIcon from '../../assets/images/icons/heart-outline.png';
 import unfavoriteIcon from '../../assets/images/icons/unfavorite.png';
 import whatsappIcon from '../../assets/images/icons/whatsapp.png';
 
+import api from '../../services/api';
+
 import styles from './styles';
 
 export interface Teacher {
@@ -25,7 +27,10 @@ interface TeacherItemProps {
 const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
   
   function handleLinkToWhatsapp() {
-    Linking.openURL(`whatsapp://send?phone=${teacher.whatsapp}`)
+    Linking.openURL(`whatsapp://send?phone=+55${teacher.whatsapp}`)
+    api.post('connections', {
+      user_id: teacher.id
+    })
   }
 
   return (

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text } from 'react-native';
 import {
   ScrollView,
@@ -7,6 +7,7 @@ import {
   RectButton,
 } from 'react-native-gesture-handler';
 import { Feather } from '@expo/vector-icons';
+import AsyncStorage from '@react-native-community/async-storage';
 
 import api from '../../services/api';
 
@@ -18,10 +19,14 @@ import styles from './styles';
 const TeacherList = () => {
   const [isFiltersVisible, setIsFiltersVisible] = useState(false);
 
+  const [teachers, setTeachers] = useState([]);
+  const [favorite, setFavorite] = useState([]);
+
   const [subject, setSubject] = useState('');
   const [week_day, setWeekDay] = useState('');
   const [time, setTime] = useState('');
-  const [teachers, setTeachers] = useState([]);
+
+  useEffect(() => {}, []);
 
   function handleToggleFiltersVisible() {
     setIsFiltersVisible(!isFiltersVisible);
