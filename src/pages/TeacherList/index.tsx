@@ -35,7 +35,7 @@ const TeacherList = () => {
         time,
       },
     });
-    console.log(response.data);
+    setIsFiltersVisible(false);
     setTeachers(response.data);
   }
 
