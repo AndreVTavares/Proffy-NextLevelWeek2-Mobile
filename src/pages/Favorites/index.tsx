@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { View, ScrollView } from 'react-native';
+import { useFocusEffect } from '@react-navigation/native';
 import AsyncStorage from '@react-native-community/async-storage';
 
 import TeacherItem, { Teacher } from '../../components/TeacherItem';
@@ -20,7 +21,7 @@ const Favorites = () => {
     });
   }
 
-  useEffect(() => {
+  useFocusEffect(() => {
     loadFavorites();
   });
 
